@@ -170,5 +170,6 @@ Sample Response Body:
 - Test depth and coverage
 - `MemoryStore` could be improved to handle concurrent update for same id
 - All Status code in except in `get` action return 422 in case of failures. This could be improved to return appropriate status code based on errors
+- Field validations like valid zip codes, phone number can be improved to cater various formats
 - Code is not linted
 - Service could be dockerized
