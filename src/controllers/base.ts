@@ -8,9 +8,9 @@ export default class BaseController {
     logger.error(err)
 
     if (err instanceof AppError) {
-      return res.status(500).send({ message: err.message });
+      res.status(res.statusCode || 500).json({ message: err.message });
     } else {
-      return res.status(500).send({ message: "Oops! Something went Wrong. Please try again later." });
+      res.status(500).json({ message: "Oops! Something went Wrong. Please try again later." });
     }
 
   }
